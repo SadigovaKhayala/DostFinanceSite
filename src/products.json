@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "Elegant Chair",
+    "price": 120,
+    "category": "Furniture",
+    "addedDate": "2024-03-01",
+    "description": "A stylish and comfortable chair for your living space.",
+    "images": [
+      "https://images.unsplash.com/photo0",
+      "https://images.unsplash.co80",
+      "https://images.unsplash80"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Modern Lamp",
+    "price": 80,
+    "category": "Lighting",
+    "addedDate": "2024-02-20",
+    "description": "A sleek lamp to brighten up your home.",
+    "images": [
+      "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80",
+      "https://images.unsplash.com/photo-1523473827533-40f0db1c1d2c?w=800&q=80",
+      "https://images.unsplash.com/photo-1528476513690-7075d5661c58?w=800&q=80"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Wooden Table",
+    "price": 200,
+    "category": "Furniture",
+    "addedDate": "2024-01-15",
+    "description": "A durable wooden table perfect for any room.",
+    "images": [
+      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
+      "https://images.unsplash.com/photo-1525054098605-8e762c017741?w=800&q=80",
+      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80"
+    ]
+  }
+]
