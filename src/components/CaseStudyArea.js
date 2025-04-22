@@ -21,26 +21,7 @@ const CaseStudyArea = () => {
   return (
     <>
       {/* ====================  Case Study Area Start ====================*/}
-      <div className="service-area pd-top-120 pd-bottom-90 ">
-        <div className="container">
-          <div className="row d-flex align-items-center justify-content-center">
-            {/* Left Sidebar */}
-
-            {/* Main Content */}
-            <div className="col-lg-12 d-flex align-items-center justify-content-center row">
-              <div className="blog-details-page-content">
-                <div className="single-blog-inner mb-0">
-                  <div className="thumb d-flex align-items-center justify-content-center row">
-                    <img src="assets/img/service/7.png" alt="img" />
-                  </div>
-
-                  <div className="details"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <div className="service-area pd-bottom-90 bg-cover  ">
         <FaqAreaOne />
         <div className="container">
           <div className="row d-flex align-items-center justify-content-center">

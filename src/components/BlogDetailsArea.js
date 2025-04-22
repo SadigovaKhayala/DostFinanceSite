@@ -34,22 +34,20 @@ const BlogDetailsArea = () => {
                     <blockquote>
                       <FaQuoteRight />
                       <p>
-                        “DOST FİNANS” MMC 06 aprel 2023-cü il tarixində Bakı
-                        şəhəri, Nərimanov rayonu, Əhmədbəy Ağaoğlu ev 12, mənzil
-                        53 ünvanında dövlət qeydiyyatından keçmiş və 20 aprel
-                        2023-cü ildən etibarən Azərbaycan Respublikası
-                        ərazisində rəsmi olaraq fəaliyyətə başlamışdır. Şirkət
-                        təcrübəli, gənc və dinamik komandası ilə qurulmuşdur.
-                        Başlanğıc mərhələdə 10 nəfərlik heyətlə fəaliyyətə
-                        başlayan DOST FİNANS, xidmət sahələrinin genişlənməsi
-                        ilə paralel olaraq komandasını da davamlı şəkildə
-                        böyüdür. Əsas fəaliyyət istiqamətlərimizə faktorinq,
-                        lizinq, restrukturizasiya, ödəmə təxirə salma
-                        kampaniyaları və mağazalar şəbəkəsi üzərindən nisyə
-                        alqı-satqı xidmətləri daxildir. Fərdi və biznes
-                        müştərilərimiz üçün çevik, şəffaf və sərfəli maliyyə
-                        həlləri təqdim edərək, onları məqsədlərinə bir addım
-                        daha yaxınlaşdırırıq.
+                        2023-cü ildə təsis olunan Dost Finans, qısa müddətdə
+                        innovativ yanaşması, şəffaf şərtləri və müştəri yönümlü
+                        xidmət modeli ilə maliyyə bazarında özünü fərqləndirməyi
+                        bacarmışdır. Məqsədimiz – istər fərdi, istərsə də biznes
+                        müştərilərə uyğun maliyyə həlləri təqdim edərək onların
+                        inkişafına və maliyyə sabitliyinə real dəstək olmaqdır.
+                        Fəaliyyət sahələrimizə faktorinq, lizinq və mağazalar
+                        şəbəkəsi üzrə nisyə satış kimi müasir maliyyə alətləri
+                        daxildir. Bu xidmətlər müştərilərimizə alış proseslərini
+                        asanlaşdırmaq, maliyyə axınlarını effektiv şəkildə idarə
+                        etmək və məqsədlərinə daha sürətlə çatmaq imkanı
+                        yaradır. Biz müştərilərimizə sadəcə xidmət göstərmirik –
+                        onların maliyyə məqsədlərinə doğru yolda etibarlı dost
+                        olmağa çalışırıq. Dost Finans – Sizin maliyyə dostunuz.
                       </p>
                     </blockquote>
                   </div>

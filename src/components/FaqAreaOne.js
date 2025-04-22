@@ -7,7 +7,7 @@ const FaqAreaOne = () => {
     <>
       {/*==================== Faq area start ====================*/}
       <div
-        className="faq-area faq-area-margin-top bg-cover pd-top-90 pd-bottom-110"
+        className="faq-area  bg-cover  pd-bottom-110"
         style={{ backgroundImage: 'url("./assets/img/bg/3.png")' }}>
         <div className="container">
           <div className="row pd-top-120">
@@ -86,16 +86,7 @@ const FaqAreaOne = () => {
                     </label>
                   </div>
                 </div>
-                <div className="w-100 d-flex justify-content-start col-md-12 mt-2">
-                  <Link
-                    className="btn btn-border-base"
-                    data-aos="fade-right"
-                    data-aos-delay="300"
-                    data-aos-duration="1500"
-                    to="/about">
-                    Ətraflı bax
-                  </Link>
-                </div>
+                <div className="w-100 d-flex justify-content-start col-md-12 mt-2"></div>
               </div>
               {/* <div
                 className="accordion accordion-inner style-2 accordion-icon-left mt-3"

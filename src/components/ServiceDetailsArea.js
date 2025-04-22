@@ -1,23 +1,23 @@
-import React from 'react';
+import React from "react";
 import {
   FaAngleDoubleRight,
   FaArrowRight,
   FaCheckCircle,
-} from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ServiceDetailsArea = () => {
   return (
     <>
       {/* ===================== Service Details Area start ===================== */}
-      <div className="service-area pd-top-120 pd-bottom-90">
+      <div className="service-area  pd-bottom-90">
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-12">
               <div className="td-sidebar service-sidebar">
                 <div className="widget widget_catagory">
                   <h5 className="widget-title">
-                    <FaArrowRight /> All Service lists
+                    <FaArrowRight /> Digər vakansiyalar
                   </h5>
                   <ul className="catagory-items">
                     <li>
@@ -37,42 +37,37 @@ const ServiceDetailsArea = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="widget widget_author text-center">
-                  <div className="thumb">
-                    <img src="assets/img/about/9.png" alt="img" />
-                  </div>
-                  <div className="details">
-                    <Link className="btn btn-base border-radius-5" to="#">
-                      Discover our company +
-                    </Link>
-                  </div>
-                </div>
-                <div className="widget widget_download">
+
+                {/* <div className="widget widget_download">
                   <h5 className="widget-title">
                     <FaArrowRight /> Download
                   </h5>
                   <ul>
                     <li>
                       <Link to="#">
-                        {' '}
+                        {" "}
                         Company Profile <FaAngleDoubleRight />
                       </Link>
                     </li>
                     <li>
                       <Link to="#">
-                        {' '}
+                        {" "}
                         Zip File Download <FaAngleDoubleRight />
                       </Link>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-lg-8">
               <div className="blog-details-page-content">
                 <div className="single-blog-inner mb-0">
                   <div className="thumb">
-                    <img src="assets/img/service/7.png" alt="img" />
+                    <img
+                      src="assets/img/service/7.png"
+                      alt="img"
+                      style={{ width: "100%", height: "auto" }}
+                    />
                   </div>
                   <div className="details">
                     <h4>
@@ -102,8 +97,7 @@ const ServiceDetailsArea = () => {
                     </p>
                     <div
                       className="accordion accordion-inner accordion-icon-left mt-3 mb-4"
-                      id="accordionExample"
-                    >
+                      id="accordionExample">
                       <div className="accordion-item">
                         <h2 className="accordion-header" id="headingOne">
                           <button
@@ -112,8 +106,7 @@ const ServiceDetailsArea = () => {
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseOne"
                             aria-expanded="true"
-                            aria-controls="collapseOne"
-                          >
+                            aria-controls="collapseOne">
                             What services do you offer?
                           </button>
                         </h2>
@@ -121,8 +114,7 @@ const ServiceDetailsArea = () => {
                           id="collapseOne"
                           className="accordion-collapse collapse show"
                           aria-labelledby="headingOne"
-                          data-bs-parent="#accordionExample"
-                        >
+                          data-bs-parent="#accordionExample">
                           <div className="accordion-body">
                             Many desktop publishing packages and web page
                             editors now use Lorem Ipsum as their default model
@@ -138,8 +130,7 @@ const ServiceDetailsArea = () => {
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseTwo"
                             aria-expanded="false"
-                            aria-controls="collapseTwo"
-                          >
+                            aria-controls="collapseTwo">
                             How long does it take for you to complete a project?
                           </button>
                         </h2>
@@ -147,8 +138,7 @@ const ServiceDetailsArea = () => {
                           id="collapseTwo"
                           className="accordion-collapse collapse"
                           aria-labelledby="headingTwo"
-                          data-bs-parent="#accordionExample"
-                        >
+                          data-bs-parent="#accordionExample">
                           <div className="accordion-body">
                             Many desktop publishing packages and web page
                             editors now use Lorem Ipsum as their default model
@@ -164,8 +154,7 @@ const ServiceDetailsArea = () => {
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseThree"
                             aria-expanded="false"
-                            aria-controls="collapseThree"
-                          >
+                            aria-controls="collapseThree">
                             How much does it cost to work with your agency?
                           </button>
                         </h2>
@@ -173,8 +162,7 @@ const ServiceDetailsArea = () => {
                           id="collapseThree"
                           className="accordion-collapse collapse"
                           aria-labelledby="headingThree"
-                          data-bs-parent="#accordionExample"
-                        >
+                          data-bs-parent="#accordionExample">
                           <div className="accordion-body">
                             Many desktop publishing packages and web page
                             editors now use Lorem Ipsum as their default model

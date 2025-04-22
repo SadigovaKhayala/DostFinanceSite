@@ -31,8 +31,7 @@ const BannerOne = () => {
                   <span>Dost Finans </span>
                 </h2>{" "}
                 <h2
-                  className="title"
-                  data-aos="fade-right"
+                  className=" col-12 "
                   data-aos-delay="200"
                   data-aos-duration="1500">
                   Sizin maliyyə dostunuz
@@ -43,10 +42,10 @@ const BannerOne = () => {
                   data-aos="fade-right"
                   data-aos-delay="250"
                   data-aos-duration="1500">
-                  “DOST FİNANS” MMC 06 aprel 2023-cü il tarixində Bakı şəhəri,
-                  Nərimanov rayonu, Əhmədbəy Ağaoğlu ev 12, mənzil 53 ünvanında
-                  dövlət qeydiyyatından keçmiş və 20 aprel 2023-cü ildən
-                  etibarən ...
+                  2023-cü ildə təsis olunan Dost Finans, qısa müddətdə innovativ
+                  yanaşması, şəffaf şərtləri və müştəri yönümlü xidmət modeli
+                  ilə maliyyə bazarında özünü fərqləndirməyi bacarmışdır.
+                  Məqsədimiz – istər fərdi...
                 </p>
                 <Link
                   className="btn btn-border-base"

@@ -29,7 +29,7 @@ const FooterSix = () => {
                     <Link to="/partner-factoring">Partnyor Faktorinqi</Link>
                   </li>
                   <li>
-                    <Link to="/leasing">Avtomibil Lizinqi </Link>
+                    <Link to="/leasing">Avtomobil Lizinqi </Link>
                   </li>
                   <li>
                     <Link to="">Mağazalar şəbəkəsi</Link>
