@@ -50,11 +50,13 @@ const FooterSix = () => {
                     <li>Bakı, Nərimanov ray., Ə.Rəcəbli 46 N (Royal Plaza)</li>
                     <li className="mt-3">
                       <FaPhoneAlt />
-                      (+994) 55 300 21 10
+                      <a href="tel:+994553002110">(+994) 55 300 21 10</a>
                     </li>
                     <li className="mt-2">
                       <IoMdMail />
-                      office@dostfinans.az
+                      <a href="mailto:office@dostfinans.az">
+                        office@dostfinans.az
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -88,33 +90,40 @@ const FooterSix = () => {
               <div className="col-lg-4 align-self-center">
                 <ul className="social-media text-lg-center mt-lg-0 mt-3 mb-lg-0 mb-3">
                   <li>
-                    <Link className="border-radius-50 bg-white smedia" to="#">
+                    <Link
+                      className="border-radius-50 bg-white smedia"
+                      to="#"
+                      style={{ fontSize: "20px" }}>
                       <FaFacebookF />
                     </Link>
                   </li>
                   <li>
                     <Link
                       className="border-radius-50 bg-white smedia"
-                      to="https://www.linkedin.com/company/dost-finans/">
+                      to="https://www.linkedin.com/company/dost-finans/"
+                      style={{ fontSize: "20px" }}>
                       <FaLinkedinIn />
                     </Link>
                   </li>
                   <li>
                     <Link
                       className="border-radius-50 bg-white smedia"
-                      to="https://www.instagram.com/dostfinans?igsh=YXR0dHR2NTh4N
-WN0)">
+                      to="https://www.instagram.com/dostfinans?igsh=YXR0dHR2NTh4NWN0)"
+                      style={{ fontSize: "20px" }}>
                       <FaInstagram />
                     </Link>
                   </li>
                   <li>
-                    <Link className="border-radius-50 bg-white smedia" to="#">
+                    <Link
+                      className="border-radius-50 bg-white smedia"
+                      to="#"
+                      style={{ fontSize: "20px" }}>
                       <FaYoutube />
                     </Link>
                   </li>
                 </ul>
               </div>
-              <div className="col-lg-4  align-self-center text-lg-end">
+              <div className="col-lg-4 align-self-center text-lg-end">
                 <p className="mb-0">© Dost Finans | All Rights Reserved</p>
               </div>
             </div>
