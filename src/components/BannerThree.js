@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import ModalVideo from "react-modal-video";
-import { Link } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
+import { useTranslation } from "react-i18next"; // Import useTranslation hook
 
 const BannerThree = () => {
   const [isOpen, setOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState("+944 ");
+  const { t } = useTranslation(); // Initialize the translation hook
 
   // Handle phone input formatting
   const handlePhoneChange = (e) => {
@@ -39,30 +40,28 @@ const BannerThree = () => {
                   className="title"
                   data-aos="fade-right"
                   data-aos-delay="200">
-                  <span>Partnyor faktorinqi</span>
+                  <span>{t("partner_factoring_title")}</span>{" "}
+                  {/* Translated title */}
                 </h2>
                 <p
                   className="content pe-xl-5"
                   data-aos="fade-right"
                   data-aos-delay="250">
-                  Partnyor faktorinqi pərakəndə satış sektorları, eləcə də
-                  xidmət sahələrinin alıcılarına hissə-hissə ödəniş imkanı
-                  tanıyan, innovativ həllərimizdən istifadə edərək satış
-                  dövriyyənizi elə öz mağazanızda və onlayn formada asanlıqla
-                  artırmağınıza kömək edən unikal bir maliyyələşmə üsuludur.
+                  {t("partner_factoring_description")}{" "}
+                  {/* Translated description */}
                 </p>
                 <button
                   className="btn btn-border-base"
                   data-aos="fade-right"
                   data-aos-delay="300"
                   onClick={() => setIsModalOpen(true)}>
-                  Müraciət et
+                  {t("apply_button")} {/* Translated button */}
                 </button>
                 <div className="d-inline-block align-self-center wow animated fadeInLeft mt-4 mt-md-0">
                   <span
                     onClick={() => setOpen(true)}
                     className="video-play-btn-hover">
-                    <img src="assets/img/video.svg" alt="img" />{" "}
+                    <img src="assets/img/video.svg" alt="img" />
                   </span>
                 </div>
               </div>
@@ -111,51 +110,45 @@ const BannerThree = () => {
             <button className="close-btn" onClick={() => setIsModalOpen(false)}>
               <IoCloseSharp />
             </button>
-            <h3>Faktorinq müraciəti</h3>
+            <h3>{t("factoring_application_title")}</h3>{" "}
+            {/* Translated modal title */}
             <form>
-              <label>S.A.A.*</label>
+              <label>{t("saa_label")}*</label> {/* Translated label */}
               <input type="text" required />
-
-              <label>İD seriyası və nömrəsi*</label>
+              <label>{t("id_series_number_label")}*</label>{" "}
+              {/* Translated label */}
               <input type="text" required />
-
-              <label>Verən orqan</label>
+              <label>{t("issuing_authority_label")}</label>{" "}
+              {/* Translated label */}
               <input type="text" />
-
-              <label>Verilmə tarixi</label>
+              <label>{t("issuance_date_label")}</label> {/* Translated label */}
               <input type="date" />
-
-              <label>FİN*</label>
+              <label>{t("fin_label")}*</label> {/* Translated label */}
               <input type="text" required />
-
-              <label>Doğum tarixi*</label>
+              <label>{t("birth_date_label")}*</label> {/* Translated label */}
               <input type="date" required />
-
-              <label>Qeydiyyat üzrə ünvan*</label>
+              <label>{t("registration_address_label")}*</label>{" "}
+              {/* Translated label */}
               <input type="text" required />
-
-              <label>Faktiki ünvan*</label>
+              <label>{t("actual_address_label")}*</label>{" "}
+              {/* Translated label */}
               <input type="text" required />
-
-              <label>E-mail</label>
+              <label>{t("email_label")}</label> {/* Translated label */}
               <input type="email" />
-
-              <label>İş yeri haqqında məlumat</label>
+              <label>{t("workplace_info_label")}</label>{" "}
+              {/* Translated label */}
               <input type="text" />
-
-              <label>İşlədiyiniz yer*</label>
+              <label>{t("employer_label")}*</label> {/* Translated label */}
               <input type="text" required />
-
-              <label>Vəzifəniz*</label>
+              <label>{t("position_label")}*</label> {/* Translated label */}
               <input type="text" required />
-
-              <label>Əmək haqqı (AZN)*</label>
+              <label>{t("salary_label")} (AZN)*</label> {/* Translated label */}
               <input type="text" required />
-
-              <label>Əlavə gəlirlər (AZN)</label>
+              <label>{t("additional_income_label")} (AZN)</label>{" "}
+              {/* Translated label */}
               <input type="text" />
-
-              <label>Əlaqə telefonu*</label>
+              <label>{t("contact_phone_label")}*</label>{" "}
+              {/* Translated label */}
               <input
                 type="tel"
                 value={phoneNumber}
@@ -163,7 +156,6 @@ const BannerThree = () => {
                 maxLength="15"
                 required
               />
-
               <label>
                 <input
                   type="checkbox"
@@ -172,18 +164,14 @@ const BannerThree = () => {
                   className="me-2 chechboxModal"
                 />
                 <span>
-                  {" "}
-                  Məlumatlarımın doğruluğunu təsdiq edir, kredit öhdəliklərim
-                  barədə məlumatların AKB-dən sorğu edilməsinə, Asan Finans və
-                  digər məlumat bazalarından qeydiyyatdan keçirilməsinə razılıq
-                  verirəm.{" "}
+                  {t("data_confirmation_text")} {/* Translated text */}
                 </span>
               </label>
               <button
                 type="submit"
                 className={`submit-btn ${!isChecked ? "disabled-btn" : ""}`}
                 disabled={!isChecked}>
-                Göndər
+                {t("submit_button")} {/* Translated button */}
               </button>
             </form>
           </div>

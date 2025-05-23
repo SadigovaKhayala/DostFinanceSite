@@ -37,6 +37,12 @@ import Project from "./pages/Project";
 import ProjectTwo from "./pages/ProjectTwo";
 import ProjectThree from "./pages/ProjectThree";
 import HomeEleven from "./pages/HomeEleven";
+import { AuthProvider } from "./components/AuthContext";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Chatbot from "./pages/ChatBot";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n";
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -47,45 +53,58 @@ function App() {
     AOS.refresh();
   }, []);
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route exact path="/" element={<HomeOne />} />
-        <Route exact path="/business-factoring" element={<HomeTwo />} />
-        <Route exact path="/partner-factoring" element={<HomeThree />} />
-        <Route exact path="/index-4" element={<HomeFour />} />
-        <Route exact path="/index-5" element={<HomeFive />} />
-        <Route exact path="/index-6" element={<HomeSix />} />
-        <Route exact path="/index-7" element={<HomeSeven />} />
-        <Route exact path="/index-8" element={<HomeEight />} />
-        <Route exact path="/index-9" element={<HomeNine />} />
-        <Route exact path="/index-10" element={<HomeTen />} />
-        <Route exact path="/index-11" element={<HomeEleven />} />
-        <Route exact path="/about" element={<About />} />
-        <Route exact path="/blog" element={<Blog />} />
-        <Route exact path="/blog-2" element={<BlogTwo />} />
-        <Route exact path="/blog-3" element={<BlogThree />} />
-        <Route exact path="/blog-4" element={<BlogFour />} />
-        <Route exact path="/about-us" element={<BlogDetails />} />
-        <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/vacancies" element={<Service />} />
-        <Route exact path="/service-2" element={<ServiceTwo />} />
-        <Route exact path="/service-3" element={<ServiceThree />} />
-        <Route exact path="/service-4" element={<ServiceFour />} />
-        <Route exact path="/service-5" element={<ServiceFive />} />
-        <Route exact path="/service-details" element={<ServiceDetails />} />
-        <Route exact path="/team" element={<Team />} />
-        <Route exact path="/team-details" element={<TeamDetails />} />
-        <Route exact path="/team-2" element={<TeamTwo />} />
-        <Route exact path="/team-3" element={<TeamThree />} />
-        <Route exact path="/pricing" element={<PriceOne />} />
-        <Route exact path="/pricing-2" element={<PriceTwo />} />
-        <Route exact path="/project" element={<Project />} />
-        <Route exact path="/project-2" element={<ProjectTwo />} />
-        <Route exact path="/project-3" element={<ProjectThree />} />
-        <Route exact path="/leasing" element={<ProjectDetails />} />
-      </Routes>
-      <ScrollToTop smooth color="#01B2C9" />
-    </BrowserRouter>
+    <I18nextProvider i18n={i18n}>
+      {" "}
+      <AuthProvider>
+        <Chatbot />
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<HomeOne />} />
+            <Route exact path="/business-factoring" element={<HomeTwo />} />
+            <Route exact path="/partner-factoring" element={<HomeThree />} />
+            <Route exact path="/index-4" element={<HomeFour />} />
+            <Route exact path="/index-5" element={<HomeFive />} />
+            <Route exact path="/index-6" element={<HomeSix />} />
+            <Route exact path="/index-7" element={<HomeSeven />} />
+            <Route exact path="/index-8" element={<HomeEight />} />
+            <Route exact path="/index-9" element={<HomeNine />} />
+            <Route exact path="/index-10" element={<HomeTen />} />
+            <Route exact path="/index-11" element={<HomeEleven />} />
+            <Route exact path="/about" element={<About />} />
+            <Route exact path="/blog" element={<Blog />} />
+            <Route exact path="/blog-2" element={<BlogTwo />} />
+            <Route exact path="/blog-3" element={<BlogThree />} />
+            <Route exact path="/blog-4" element={<BlogFour />} />
+            <Route exact path="/about-us" element={<BlogDetails />} />
+            <Route exact path="/contact" element={<Contact />} />
+            <Route exact path="/vacancies" element={<Service />} />
+            <Route exact path="/service-2" element={<ServiceTwo />} />
+            <Route exact path="/service-3" element={<ServiceThree />} />
+            <Route exact path="/service-4" element={<ServiceFour />} />
+            <Route exact path="/service-5" element={<ServiceFive />} />
+            <Route exact path="/service-details" element={<ServiceDetails />} />
+            <Route exact path="/team" element={<Team />} />
+            <Route exact path="/team-details" element={<TeamDetails />} />
+            <Route exact path="/team-2" element={<TeamTwo />} />
+            <Route exact path="/team-3" element={<TeamThree />} />
+            <Route exact path="/pricing" element={<PriceOne />} />
+            <Route exact path="/pricing-2" element={<PriceTwo />} />
+            <Route exact path="/project" element={<Project />} />
+            <Route exact path="/project-2" element={<ProjectTwo />} />
+            <Route exact path="/project-3" element={<ProjectThree />} />
+            <Route exact path="/chatbot" element={<Chatbot />} />
+            {/* <Route exact path="/leasing" element={<ProjectDetails />} /> */}
+
+            <Route
+              exact
+              path="/leasing"
+              element={<ProtectedRoute element={ProjectDetails} />}
+            />
+          </Routes>
+          <ScrollToTop smooth color="#01B2C9" />
+        </BrowserRouter>
+      </AuthProvider>
+    </I18nextProvider>
   );
 }
 

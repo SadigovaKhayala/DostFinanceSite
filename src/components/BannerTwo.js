@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ModalVideo from "react-modal-video";
+import { useTranslation } from "react-i18next"; // Import useTranslation hook
+
 const BannerTwo = () => {
   const [isOpen, setOpen] = useState(false);
+  const { t } = useTranslation(); // Initialize the translation hook
+
   return (
     <>
       {/* ================== BannerTwo Start ==================*/}
@@ -15,30 +19,29 @@ const BannerTwo = () => {
             <div className="col-lg-6 align-self-center">
               <div className="banner-inner pe-xl-5">
                 <h2
-                  className="title "
+                  className="title"
                   data-aos="fade-right"
                   data-aos-delay="200"
                   data-aos-duration="1500">
-                  {" "}
-                  <span>Biznes </span> Faktorinqi
+                  <span>{t("business_factoring")}</span>{" "}
+                  {/* Using translation */}
                 </h2>
                 <p
-                  className="content pe-xl-5 "
+                  className="content pe-xl-5"
                   data-aos="fade-right"
                   data-aos-delay="250"
                   data-aos-duration="1500">
-                  Biznes faktorinqi biznes sahiblərinin müəssisə (və ya şirkət)
-                  daxilində nağd pul axınını yaxşılaşdırmaq üçün ödənilməli
-                  invoyslarının bir hissəsini və ya hamısını faktorinq şirkətinə
-                  satması ilə həyata keçirilən maliyyələşdirmə prosesidir.
+                  {t("business_factoring_description")}{" "}
+                  {/* Using translation */}
                 </p>
+                {/* Uncomment the following if you want the "Discover More" button back */}
                 {/* <Link
-                  className="btn btn-border-base "
+                  className="btn btn-border-base"
                   data-aos="fade-right"
                   data-aos-delay="300"
                   data-aos-duration="1500"
                   to="/about">
-                  Discover More <FaPlus />
+                  {t("discover_more")} <FaPlus />
                 </Link> */}
                 <div
                   className="d-inline-block align-self-center mt-4 mt-md-0"
@@ -48,16 +51,17 @@ const BannerTwo = () => {
                   <span
                     onClick={() => setOpen(true)}
                     className="video-play-btn-hover">
-                    <img src="assets/img/video.svg" alt="img" />{" "}
-                    <h6 className="d-inline-block">Biznes faktorinqi nədir?</h6>
+                    <img src="assets/img/video.svg" alt="img" />
+                    <h6 className="d-inline-block">
+                      {t("business_factoring_video_title")}
+                    </h6>{" "}
+                    {/* Using translation */}
                   </span>
-
-                  <div></div>
                 </div>
               </div>
             </div>
             <div
-              className="col-lg-6 col-md-9 "
+              className="col-lg-6 col-md-9"
               data-aos="fade-left"
               data-aos-delay="100"
               data-aos-duration="1500">
@@ -94,7 +98,6 @@ const BannerTwo = () => {
           </div>
         </div>
       </div>
-
       {/* ================== BannerTwo End ==================*/}
       <ModalVideo
         channel="youtube"

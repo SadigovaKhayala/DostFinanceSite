@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { FaSearch, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
+  const { t, i18n } = useTranslation(); // Using the translation hook
   const [active, setActive] = useState(false);
   const [searchShow, setSearchShow] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState({});
@@ -15,13 +17,19 @@ const NavBar = () => {
     setSearchShow(!searchShow);
   };
 
-  // 🛠️ Fix: Run this only after the component mounts
+  // Language change handler
+  const handleLanguageChange = (lang) => {
+    i18n.changeLanguage(lang); // Change language using react-i18next
+  };
+
+  const isLoggedIn = localStorage.getItem("userLoggedIn");
+
   useEffect(() => {
     const items = document.querySelectorAll(".menu-item-has-children > a");
 
     items.forEach((item) => {
       item.addEventListener("click", function (event) {
-        event.preventDefault(); // Prevent default link behavior
+        event.preventDefault();
         const subMenu = this.parentElement.querySelector(".sub-menu");
         if (subMenu) {
           subMenu.classList.toggle("active");
@@ -30,13 +38,12 @@ const NavBar = () => {
       });
     });
 
-    // Cleanup function to remove event listeners when component unmounts
     return () => {
       items.forEach((item) => {
         item.removeEventListener("click", function () {});
       });
     };
-  }, []); // Runs only once after component mounts
+  }, []);
 
   return (
     <>
@@ -49,7 +56,7 @@ const NavBar = () => {
             <input
               type="text"
               className="form-control"
-              placeholder="Search....."
+              placeholder={t("search_placeholder")} // Use translation for the placeholder
             />
           </div>
           <button type="submit" className="submit-btn">
@@ -107,7 +114,7 @@ const NavBar = () => {
                 onMouseEnter={() => setDropdownOpen(true)}
                 onMouseLeave={() => setDropdownOpen(false)}>
                 <Link to="#">
-                  Faktorinq{" "}
+                  {t("faktorinq")}{" "}
                   {dropdownOpen ? (
                     <FaChevronUp className="dropdownLinkIcon" />
                   ) : (
@@ -117,12 +124,12 @@ const NavBar = () => {
                 <ul className={`sub-menu ${dropdownOpen ? "active" : ""}`}>
                   <li>
                     <Link to="/business-factoring" className="pt-3 pb-3">
-                      Biznes Faktorinqi
+                      {t("biznesFaktorinqi")}
                     </Link>
                   </li>
                   <li>
                     <Link to="/partner-factoring" className="pt-3 pb-3">
-                      Partnyor Faktorinqi
+                      {t("partnyorFaktorinqi")}
                     </Link>
                   </li>
                 </ul>
@@ -133,7 +140,7 @@ const NavBar = () => {
                 onMouseEnter={() => setDropdownOpen(true)}
                 onMouseLeave={() => setDropdownOpen(false)}>
                 <Link to="#">
-                  Lizinq{" "}
+                  {t("lizinq")}{" "}
                   {dropdownOpen ? (
                     <FaChevronUp className="dropdownLinkIcon" />
                   ) : (
@@ -143,71 +150,26 @@ const NavBar = () => {
                 <ul className={`sub-menu ${dropdownOpen ? "active" : ""}`}>
                   <li>
                     <Link to="/leasing" className="pt-3 pb-3">
-                      Avtomobil Lizinqi{" "}
+                      {t("avtomobilLizinqi")}
                     </Link>
                   </li>
-                </ul>
-              </li>
-
-              <li
-                className="menu-item-has-children"
-                onMouseEnter={() =>
-                  setDropdownOpen({ ...dropdownOpen, stores: true })
-                }
-                onMouseLeave={() =>
-                  setDropdownOpen({ ...dropdownOpen, stores: false })
-                }>
-                <Link to="#">
-                  Mağazalar şəbəkəsi{" "}
-                  {dropdownOpen.stores ? (
-                    <FaChevronUp className="dropdownLinkIcon" />
-                  ) : (
-                    <FaChevronDown className="dropdownLinkIcon" />
-                  )}
-                </Link>
-                <ul
-                  className={`sub-menu ${dropdownOpen.stores ? "active" : ""}`}>
-                  <li>
-                    <Link to="/store-list" className="pt-3 pb-3">
-                      Mebel
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/partner-stores" className="pt-3 pb-3">
-                      Məişət{" "}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/partner-stores" className="pt-3 pb-3">
-                      Elektronika
-                    </Link>
-                  </li>{" "}
-                  <li>
-                    <Link to="/partner-stores" className="pt-3 pb-3">
-                      Mobil telefonlar{" "}
-                    </Link>
-                  </li>{" "}
-                  <li>
-                    <Link to="/partner-stores" className="pt-3 pb-3">
-                      Digər
-                    </Link>
-                  </li>{" "}
                 </ul>
               </li>
 
               <li>
-                <Link to="/vacancies">Vakansiyalar</Link>
+                <Link to="/vacancies">{t("vakansiyalar")}</Link>
               </li>
+
               <li
-                className="menu-item-has-children me-4"
+                className="menu-item-has-children "
                 onMouseEnter={() =>
                   setDropdownOpen({ ...dropdownOpen, stores: true })
                 }
                 onMouseLeave={() =>
                   setDropdownOpen({ ...dropdownOpen, stores: false })
                 }>
-                <Link to="#" className="me-4">
-                  Ödəniş et
+                <Link to="#" className="">
+                  {t("odemek")}
                   {dropdownOpen.stores ? (
                     <FaChevronUp className="dropdownLinkIcon" />
                   ) : (
@@ -217,26 +179,58 @@ const NavBar = () => {
                 <ul
                   className={`sub-menu ${dropdownOpen.stores ? "active" : ""}`}>
                   <li>
-                    <li className="pt-3 pb-3">
-                      <a
-                        href="https://www.million.az/services/bank/DostFinance"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        {" "}
-                        Milli Ön
-                      </a>
-                    </li>{" "}
+                    <a
+                      href="https://www.million.az/services/bank/DostFinance"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      {" "}
+                      Milli Ön
+                    </a>
                   </li>
                   <li>
-                    <li className="pt-3 pb-3">
-                      <a
-                        href="https://expresspay.az/payment/service/1612"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        {" "}
-                        Expresspay
-                      </a>
-                    </li>{" "}
+                    <a
+                      href="https://expresspay.az/payment/service/1612"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      {" "}
+                      Expresspay
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              {isLoggedIn ? (
+                <li>
+                  <Link to="/profile">{t("profile")}</Link>
+                </li>
+              ) : (
+                <li>
+                  <Link to="/login">{t("login")}</Link>
+                </li>
+              )}
+
+              {/* Language Switcher */}
+              <li
+                className="menu-item-has-children"
+                onMouseEnter={() => setDropdownOpen(true)}
+                onMouseLeave={() => setDropdownOpen(false)}>
+                <Link to="#">
+                  {i18n.language.toUpperCase()}
+                  {dropdownOpen ? (
+                    <FaChevronUp className="dropdownLinkIcon" />
+                  ) : (
+                    <FaChevronDown className="dropdownLinkIcon" />
+                  )}
+                </Link>
+                <ul className={`sub-menu ${dropdownOpen ? "active" : ""}`}>
+                  <li onClick={() => handleLanguageChange("az")}>
+                    <Link className="pt-3 pb-3">AZ</Link>
+                  </li>
+                  <li onClick={() => handleLanguageChange("ru")}>
+                    <Link className="pt-3 pb-3">RU</Link>
+                  </li>
+                  <li onClick={() => handleLanguageChange("en")}>
+                    <Link className="pt-3 pb-3">EN</Link>
                   </li>
                 </ul>
               </li>

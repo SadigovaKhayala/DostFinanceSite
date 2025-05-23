@@ -5,7 +5,7 @@ import BlogAreaTwo from "../components/BlogAreaTwo";
 import ContactAreaTwo from "../components/ContactAreaTwo";
 import CounterAreaTwo from "../components/CounterAreaTwo";
 import FooterTwo from "../components/FooterSix";
-import NavbarTwo from "../components/NavBar";
+import Navbar from "../components/NavBar";
 import PricingAreaTwo from "../components/PricingAreaTwo";
 import ServiceAreaTwo from "../components/ServiceAreaTwo";
 import TestimonialOne from "../components/TestimonialOne";
@@ -15,7 +15,7 @@ const HomeTwo = () => {
   return (
     <>
       {/* Navigation Bar Two*/}
-      <NavbarTwo />
+      <Navbar />
 
       {/* Banner Two */}
       <BannerTwo />

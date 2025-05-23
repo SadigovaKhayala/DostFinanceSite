@@ -1,8 +1,11 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const BannerOne = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       {/* ================== BannerOne Start ==================*/}
@@ -28,24 +31,20 @@ const BannerOne = () => {
                   data-aos="fade-right"
                   data-aos-delay="200"
                   data-aos-duration="1500">
-                  <span>Dost Finans </span>
-                </h2>{" "}
+                  <span>{t("banner_title")}</span>
+                </h2>
                 <h2
                   className=" col-12 "
                   data-aos-delay="200"
                   data-aos-duration="1500">
-                  Sizin maliyyə dostunuz
+                  {t("banner_subtitle")}
                 </h2>
-                .
                 <p
                   className="content pe-xl-5"
                   data-aos="fade-right"
                   data-aos-delay="250"
                   data-aos-duration="1500">
-                  2023-cü ildə təsis olunan Dost Finans, qısa müddətdə innovativ
-                  yanaşması, şəffaf şərtləri və müştəri yönümlü xidmət modeli
-                  ilə maliyyə bazarında özünü fərqləndirməyi bacarmışdır.
-                  Məqsədimiz – istər fərdi...
+                  {t("banner_content")}
                 </p>
                 <Link
                   className="btn btn-border-base"
@@ -53,7 +52,7 @@ const BannerOne = () => {
                   data-aos-delay="300"
                   data-aos-duration="1500"
                   to="/about-us">
-                  Ətraflı bax <FaPlus />
+                  {t("banner_btn")} <FaPlus />
                 </Link>
               </div>
             </div>
