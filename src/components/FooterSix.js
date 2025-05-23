@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { FaPhoneAlt } from "react-icons/fa";
 import { ImLocation } from "react-icons/im";
 import { IoMdMail } from "react-icons/io";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const FooterSix = () => {
   return (
@@ -92,8 +93,10 @@ const FooterSix = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="border-radius-50 bg-white smedia" to="#">
-                      <FaTwitter />
+                    <Link
+                      className="border-radius-50 bg-white smedia"
+                      to="https://www.linkedin.com/company/dost-finans/">
+                      <FaLinkedinIn />
                     </Link>
                   </li>
                   <li>
