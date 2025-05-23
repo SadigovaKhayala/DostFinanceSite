@@ -93,13 +93,13 @@ function App() {
             <Route exact path="/project-2" element={<ProjectTwo />} />
             <Route exact path="/project-3" element={<ProjectThree />} />
             <Route exact path="/chatbot" element={<Chatbot />} />
-            {/* <Route exact path="/leasing" element={<ProjectDetails />} /> */}
+            <Route exact path="/leasing" element={<ProjectDetails />} />
 
-            <Route
+            {/* <Route
               exact
               path="/leasing"
               element={<ProtectedRoute element={ProjectDetails} />}
-            />
+            /> */}
           </Routes>
           <ScrollToTop smooth color="#01B2C9" />
         </BrowserRouter>
